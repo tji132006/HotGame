@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from '../assets/images/logo.svg';
 import '../styles/App.css';
+import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom'
 import {EventHeader} from "./EventHeader"
 import {EventFooter} from "./EventFooter"
 import {EventContainer} from "./EventContainer"
@@ -10,7 +10,14 @@ class App extends Component {
       return(
           <div className="App">
               <EventHeader/>
-              <EventContainer/>
+
+              <BrowserRouter>
+                  <Switch>
+                      <Route exact path="/" component={EventContainer}></Route>
+
+                  </Switch>
+              </BrowserRouter>
+
               <EventFooter/>
           </div>
       );
