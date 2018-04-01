@@ -12,7 +12,7 @@ export class EventHeader extends React.Component{
                     <Col span={4}>
                         <a href = "/" className= "logo">
                             <img src={logo} alt="logo"/>
-                            <span>Hot Events</span>
+                            <span>Hot Games</span>
                         </a>
                     </Col>
                     <Col span={12}></Col>
