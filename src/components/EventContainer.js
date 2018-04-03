@@ -14,15 +14,29 @@ export class EventContainer extends React.Component{
                   <Col span={12}>
                       <Tabs>
                           <TabPane tab="Soccer" key="1">
-                              <EventBlock count={10} type="guonei" width="100%" bordered="false"/>
+                              <EventBlock limit={10} types="football_match" width="100%" bordered="false"/>
                           </TabPane>
-                          <TabPane tab="Basketball" key="2"></TabPane>
-                          <TabPane tab="Football" key="3"></TabPane>
-                          <TabPane tab="Horse Racing" key="4"></TabPane>
-                          <TabPane tab="Boxing" key="5"></TabPane>
-                          <TabPane tab="Baseball" key="6"></TabPane>
-                          <TabPane tab="Golf" key="7"></TabPane>
-                          <TabPane tab="Ice Hockey" key="8"></TabPane>
+                          <TabPane tab="Basketball" key="2">
+                              <EventBlock limit={10} types="basketball_match" width="100%" bordered="false"/>
+                          </TabPane>
+                          <TabPane tab="Snooker" key="3">
+                              <EventBlock limit={10} types="snooker_match" width="100%" bordered="false"/>
+                          </TabPane>
+                          <TabPane tab="Horse Racing" key="4">
+                              <EventBlock limit={10} types="horse_racing_race" width="100%" bordered="false"/>
+                          </TabPane>
+                          <TabPane tab="Boxing" key="5">
+                              <EventBlock limit={10} types="boxing_match" width="100%" bordered="false"/>
+                          </TabPane>
+                          <TabPane tab="Baseball" key="6">
+                              <EventBlock limit={10} types="baseball_match" width="100%" bordered="false"/>
+                          </TabPane>
+                          <TabPane tab="Tennis" key="7">
+                              <EventBlock limit={10} types="tennis_match" width="100%" bordered="false"/>
+                          </TabPane>
+                          <TabPane tab="Ice Hockey" key="8">
+                              <EventBlock limit={10} types="ice_hockey_match" width="100%" bordered="false"/>
+                          </TabPane>
                       </Tabs>
                   </Col>
                   <Col span={6}></Col>

@@ -1,4 +1,5 @@
 import React from 'react';
+import 'whatwg-fetch';
 import {Card} from 'antd';
 import { Link } from 'react-router-dom';
 
@@ -12,25 +13,35 @@ export class EventBlock extends React.Component{
     }
 
     componentWillMount(){
+        const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+        const url = "https://api.smarkets.com/v3/events/?states=upcoming&types="
         var myFetchOptions ={
-            method: 'GET'
+            method: 'GET',
         };
-        fetch("https://api.smarkets.com/v3/events/?states=upcoming&types=football_match&sort=id&limit=10", myFetchOptions)
+
+        fetch(proxyUrl + url +this.props.types+"&sort=id&limit=" + this.props.limit, myFetchOptions)
             .then(response => response.json())
-            .then(json => this.setState({soccer: json}));
+            .then(json => {this.setState({soccer: json})});
+            //.then(res => console.log(res));
     }
+
     render(){
         const {soccer} = this.state;
 
-        const soccerList = soccer.length
-        ? soccer.map((soccerItem, index)=>(
-            <li key={index}>
-                <Link to={`details/${soccerItem.uniquekey}`} target="_blank">
-                    {soccerItem.title}
-                </Link>
-            </li>
+        // const soccerList = Object.keys(soccer).length;
+        //console.log(Object.values(soccer)[0]);
+
+        console.log(soccer.events);
+        const soccerList = Object.keys(soccer).length
+            ? soccer.events.map((soccerItem, index)=>(
+                <li key={index}>
+                    <Link to={`details/${soccerItem.short_name}`} target="_blank">
+                        {soccerItem.name}
+                    </Link>
+                </li>
             ))
-            : 'There is no match today.'
+            :'Loading...';
+        //console.log(soccerItem);
         return(
           <div className="list">
               <Card>

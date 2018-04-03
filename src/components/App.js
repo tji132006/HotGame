@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom'
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import {EventHeader} from "./EventHeader"
 import {EventFooter} from "./EventFooter"
 import {EventContainer} from "./EventContainer"
