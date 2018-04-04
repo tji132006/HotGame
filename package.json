@@ -12,17 +12,6 @@
     "react-scripts": "1.1.1",
     "whatwg-fetch": "^2.0.4"
   },
-//  "proxy": {
-//    "/api/RoomApi": {
-//      "target": "https://api.smarkets.com/",
-//      "changeOrigin":true
-//    },
-//    "/api/v1":{
-//      "target":"http://capi.douyucdn.cn",
-//      "changeOrigin":true
-//    }
-//  },
-//  "proxy": "https://api.smarkets.com",
 
   "scripts": {
     "start": "react-scripts start",

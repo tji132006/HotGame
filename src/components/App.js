@@ -4,6 +4,9 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import {EventHeader} from "./EventHeader"
 import {EventFooter} from "./EventFooter"
 import {EventContainer} from "./EventContainer"
+import {EventsDetails} from "./EventsDetails"
+ //import {GameDetails} from "./GameDetails"
+
 
 class App extends Component {
   render() {
@@ -14,7 +17,7 @@ class App extends Component {
               <BrowserRouter>
                   <Switch>
                       <Route exact path="/" component={EventContainer}></Route>
-
+                      <Route path="/details/:id" component={EventsDetails}></Route>
                   </Switch>
               </BrowserRouter>
 

@@ -15,6 +15,7 @@ export class EventBlock extends React.Component{
     componentWillMount(){
         const proxyUrl = "https://cors-anywhere.herokuapp.com/";
         const url = "https://api.smarkets.com/v3/events/?states=upcoming&types="
+
         var myFetchOptions ={
             method: 'GET',
         };
@@ -22,28 +23,26 @@ export class EventBlock extends React.Component{
         fetch(proxyUrl + url +this.props.types+"&sort=id&limit=" + this.props.limit, myFetchOptions)
             .then(response => response.json())
             .then(json => {this.setState({soccer: json})});
-            //.then(res => console.log(res));
     }
 
     render(){
         const {soccer} = this.state;
 
-        // const soccerList = Object.keys(soccer).length;
-        //console.log(Object.values(soccer)[0]);
-
         console.log(soccer.events);
         const soccerList = Object.keys(soccer).length
             ? soccer.events.map((soccerItem, index)=>(
                 <li key={index}>
-                    <Link to={`details/${soccerItem.short_name}`} target="_blank">
+                    <Link to={`details/${soccerItem.id}`} target="_blank">
                         {soccerItem.name}
+                        {console.log(soccerItem.id)}
                     </Link>
                 </li>
+
             ))
             :'Loading...';
-        //console.log(soccerItem);
+
         return(
-          <div className="list">
+          <div>
               <Card>
                   <ul>
                       {soccerList}

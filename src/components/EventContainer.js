@@ -3,6 +3,7 @@ import {Row, Col} from 'antd';
 import {Tabs} from 'antd';
 import {EventBlock} from "./EventBlock"
 
+
 const TabPane = Tabs.TabPane;
 
 export class EventContainer extends React.Component{
