@@ -18,7 +18,7 @@ export class EventsDetails extends React.Component{
         var myFetchOptions ={
             method: 'GET',
         };
-
+      //fetching specific data from Smarkets API by query id
       fetch(proxyUrl + url + this.props.match.params.id, myFetchOptions)
             .then(response => response.json())
             .then(json => {this.setState({details: json})});

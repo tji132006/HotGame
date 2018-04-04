@@ -5,8 +5,6 @@ import {EventHeader} from "./EventHeader"
 import {EventFooter} from "./EventFooter"
 import {EventContainer} from "./EventContainer"
 import {EventsDetails} from "./EventsDetails"
- //import {GameDetails} from "./GameDetails"
-
 
 class App extends Component {
   render() {

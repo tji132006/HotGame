@@ -13,13 +13,14 @@ export class EventBlock extends React.Component{
     }
 
     componentWillMount(){
+        //proxy url for cors
         const proxyUrl = "https://cors-anywhere.herokuapp.com/";
         const url = "https://api.smarkets.com/v3/events/?states=upcoming&types="
 
         var myFetchOptions ={
             method: 'GET',
         };
-
+        //fetching data from Smarkets API
         fetch(proxyUrl + url +this.props.types+"&sort=id&limit=" + this.props.limit, myFetchOptions)
             .then(response => response.json())
             .then(json => {this.setState({soccer: json})});
