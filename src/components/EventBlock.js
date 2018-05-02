@@ -44,7 +44,7 @@ export class EventBlock extends React.Component{
 
         return(
           <div>
-              <Card>
+              <Card className='bg'>
                   <ul>
                       {soccerList}
                   </ul>

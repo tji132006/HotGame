@@ -4,3 +4,15 @@
 @import 'EventContainer.css';
 @import 'EventBlock.css';
 @import 'EventsDetails.css';
+
+body{
+    background-color: #faad14;
+}
+.particles{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}

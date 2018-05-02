@@ -1,3 +1,7 @@
 ul{
     font-size:26px;
 }
+
+.bg{
+    background: rgba(250,173,20, 0.3);
+}

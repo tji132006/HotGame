@@ -2,7 +2,8 @@
     background-color: gainsboro;
     text-align: center;
     width: 33.33%;
-    /*border: 1px black solid;*/
+    background: rgba(250,173,20, 0.3);
+    margin-top: 100px;
 
 }
 
